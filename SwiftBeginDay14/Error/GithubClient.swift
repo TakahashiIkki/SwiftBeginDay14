@@ -13,7 +13,7 @@ import Foundation
 /// - connectionError: 通信に失敗したときのエラー
 /// - responseParseError: レスポンスの解釈に失敗したときのエラー
 /// - apiError: APIからエラーレスポンスを受け取ったときの例
-enum GithubClient: Error {
+enum GithubClientError: Error {
     case connectionError(Error)
     case responseParseError(Error)
     case apiError(GithubAPIError)
