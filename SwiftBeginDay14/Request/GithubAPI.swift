@@ -29,4 +29,22 @@ final class GithubAPI {
             return ["q": keyeord]
         }
     }
+    
+    struct SearchUsers: GithubRequest {
+        let keyword: String
+        
+        typealias Response = SearchResponse<User>
+        
+        var method: HTTPMethod {
+            return .get
+        }
+        
+        var path: String {
+            return "/search/users"
+        }
+        
+        var parameters: Any? {
+            return ["q": keyword]
+        }
+    }
 }
